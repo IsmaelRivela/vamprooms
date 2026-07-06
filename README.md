@@ -1,4 +1,4 @@
-# BACKROOMS — Portfolio FPS
+# VAMPROOMS — Portfolio FPS
 
 Explorador en primera persona estilo *Backrooms* / PS1 para recorrer el portfolio creativo de **VAMPS Studio**. Generación procedural de pasillos, salas temáticas por proyecto y micro-interacciones (linterna, tele, objetos).
 
@@ -78,7 +78,7 @@ public/
 ## Editor de layouts
 
 Los muebles y props de cada sala viven en `public/room-layouts/*.json`.  
-Para editarlos visualmente usa el **[Layout Editor](../backrooms-layout-editor)** (repo hermano) o, en este mismo proyecto:
+Para editarlos visualmente usa el **[Layout Editor](../vamprooms-editor)** (repo hermano) o, en este mismo proyecto:
 
 ```bash
 npm run dev

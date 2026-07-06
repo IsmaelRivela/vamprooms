@@ -1,6 +1,6 @@
-# BACKROOMS — Layout Editor
+# VAMPROOMS — Layout Editor
 
-Editor visual en navegador para colocar **props 3D**, texturas de pared/suelo y exportar layouts JSON usados por el juego [BACKROOMS Portfolio](https://github.com/IsmaelRivela/backrooms-portfolio).
+Editor visual en navegador para colocar **props 3D**, texturas de pared/suelo y exportar layouts JSON usados por el juego [VAMPROOMS](https://github.com/IsmaelRivela/vamprooms).
 
 ![Vista del editor](docs/screenshots/editor.png)
 
@@ -93,7 +93,7 @@ Escanea `public/assets/` y regenera `public/assets/asset-catalog.json`.
 | `room-layouts/*.json` | `loadWorldLayouts()` en runtime |
 | Texturas / modelos en `public/assets/` | Mismas rutas |
 
-Repo del juego: **[backrooms-portfolio](https://github.com/IsmaelRivela/backrooms-portfolio)**
+Repo del juego: **[vamprooms](https://github.com/IsmaelRivela/vamprooms)**
 
 ## Build
 
