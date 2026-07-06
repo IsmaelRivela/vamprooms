@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="220" viewBox="0 0 320 220">
+  <rect width="320" height="220" fill="#1a1030"/>
+  <text x="160" y="110" fill="#ff44aa" font-family="monospace" font-size="18" text-anchor="middle">NEON DRIFT</text>
+  <rect x="40" y="140" width="240" height="4" fill="#44aaff"/>
+</svg>

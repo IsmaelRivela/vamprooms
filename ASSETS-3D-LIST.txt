@@ -1,0 +1,156 @@
+BACKROOMS — Lista de assets 3D para buscar
+==========================================
+
+Formato obligatorio
+-------------------
+  • Archivo:     .glb  (glTF 2.0 binario, un objeto = un archivo)
+  • Draco:       OK (compresión, como los de VAMPS Pharma)
+  • Polígonos:   500 – 4 000 tris por prop (low-poly / PS1)
+  • Escala real: 0,3 – 1,2 m de alto aprox.
+  • Ejes:        Y arriba, base del objeto en Y = 0
+  • Texturas:    embebidas en el GLB (512–1024 px)
+  • Nombre:      kebab-case.glb  (sin espacios, sin símbolos +)
+
+Dónde guardarlos en el proyecto
+-------------------------------
+  public/assets/rooms/la-tulipana/
+  public/assets/rooms/copydad/
+  public/assets/rooms/vamps-brand/
+  public/assets/rooms/vamps-pharma/3d/
+  public/assets/rooms/vamps-back2school/
+
+Marca [ ] cuando lo tengas. Prioridad: P1 (urgente) → P3 (opcional).
+
+
+═══════════════════════════════════════════════════════════════
+ LA TULIPANA — Floristería, césped, empapelado floral
+ Sustituye: macetas/cilindros de colores procedurales
+═══════════════════════════════════════════════════════════════
+
+  [ ] P1  flower-pot.glb          Maceta con planta
+  [ ] P1  tulip-bouquet.glb       Ramo de tulipanes
+  [ ] P1  florist-vase.glb          Jarrón grande (centro de sala)
+  [ ] P2  watering-can.glb        Regadera
+  [ ] P3  shop-sign.glb           Letrero / cartel floristería
+  [ ] P3  wicker-basket.glb       Cesta mimbre con flores
+
+
+═══════════════════════════════════════════════════════════════
+ COPYDAD — Armario de padre, ladrillo, moda
+ Sustituye: perchero y camisetas-planas de cajas
+═══════════════════════════════════════════════════════════════
+
+  [ ] P1  clothing-rack.glb       Perchero con ropa colgada
+  [ ] P1  folded-shirt.glb        Camiseta doblada o en percha
+  [ ] P2  cardboard-box.glb       Caja de mudanza / archivo
+  [ ] P2  vintage-jacket.glb      Chaqueta vintage
+  [ ] P3  sticker-sheet.glb       Hoja de stickers (plano fino)
+  [ ] P3  coat-hanger.glb         Percha suelta
+
+
+═══════════════════════════════════════════════════════════════
+ VAMPS BRAND — Identidad roja/negra, skate/pillo
+ Sustituye: cubo rojo y planos de color
+═══════════════════════════════════════════════════════════════
+
+  [ ] P1  logo-pedestal.glb       Bloque / pedestal con logo VAMPS
+  [ ] P1  skateboard.glb          Skateboard (guiño Vans)
+  [ ] P2  sneaker.glb             Zapato / bamba
+  [ ] P2  spray-can.glb           Bote spray
+  [ ] P3  cap.glb                 Gorra
+  [ ] P3  sticker-bomb.glb         Pack stickers (plano o low poly)
+
+
+═══════════════════════════════════════════════════════════════
+ VAMPS PHARMA — Clínica / farmacia
+ Ya tienes (renombrar sin + si puedes):
+═══════════════════════════════════════════════════════════════
+
+  [x] P1  vampire-fang-ring.glb   Anillo colmillo     → ya en pharma/3d
+  [x] P1  nail-art.glb            Uñas decoradas      → ya en pharma/3d
+  [x] P1  white-tshirt.glb        Camiseta blanca     → ya en pharma/3d
+
+  Buscar nuevos:
+  [ ] P1  medicine-shelf.glb      Estantería farmacia (pared)
+  [ ] P1  pill-bottle.glb         Bote de pastillas
+  [ ] P2  first-aid-kit.glb       Botiquín
+  [ ] P2  pharmacy-cross.glb      Cruz roja (decoración pared)
+  [ ] P3  medicine-box.glb        Caja medicamento genérica
+
+
+═══════════════════════════════════════════════════════════════
+ VAMPS BACK2SCHOOL — Colegio, linóleo, taquillas
+ Ya tienes:
+═══════════════════════════════════════════════════════════════
+
+  [x] P1  pizza-box.glb           Caja pizza 3D       → ya en pharma/3d
+
+  Buscar nuevos:
+  [ ] P1  locker.glb              Taquilla escolar (sustituye losas teal)
+  [ ] P1  cafeteria-tray.glb      Bandeja comedor
+  [ ] P2  school-desk.glb         Pupitre / mesa escolar
+  [ ] P2  backpack.glb            Mochila
+  [ ] P3  pencil-case.glb         Estuche
+  [ ] P3  apple-food.glb          Manzana (detalle comedor)
+
+
+═══════════════════════════════════════════════════════════════
+ DÓNDE BUSCAR (gratis o barato)
+═══════════════════════════════════════════════════════════════
+
+  • Sketchfab.com     → filtro: Downloadable, Low poly
+  • poly.pizza
+  • kenney.nl/assets
+  • quaternius.com    → packs low-poly CC0
+  • Blender           → Export → glTF 2.0 (.glb)
+
+  Antes de exportar en Blender:
+    1. Apply Scale (Ctrl+A)
+    2. Origen en la base del objeto
+    3. Comprobar que no esté tumbado (rotar si hace falta)
+
+
+═══════════════════════════════════════════════════════════════
+ ORDEN RECOMENDADO (si vas poco a poco)
+═══════════════════════════════════════════════════════════════
+
+  1. medicine-shelf.glb + pill-bottle.glb     (Pharma)
+  2. flower-pot.glb + tulip-bouquet.glb       (Tulipana)
+  3. locker.glb                               (Back2School)
+  4. clothing-rack.glb                        (Copydad)
+  5. skateboard.glb o logo-pedestal.glb     (VAMPS Brand)
+
+Cuando tengas archivos en public/assets/rooms/, avisa y los conecto al juego.
+
+
+═══════════════════════════════════════════════════════════════
+ COLOCACIÓN DE PROPS — editamos juntos estos JSON
+═══════════════════════════════════════════════════════════════
+
+Un archivo por sala en:
+  public/room-layouts/la-tulipana.json
+  public/room-layouts/copydad.json
+  public/room-layouts/vamps-brand.json
+  public/room-layouts/vamps-pharma.json
+  public/room-layouts/vamps-back2school.json
+
+Cada prop tiene:
+  src          → ruta del .glb (ver lista arriba)
+  position     → [X, Y, Z] relativo al CENTRO de la sala
+                 X negativo = izquierda, X positivo = derecha
+                 Z negativo = hacia pared norte, Z positivo = sur
+  rotationDeg  → [X, Y, Z] en GRADOS (0–360)
+  scale        → multiplicador extra (1 = normal)
+  fitSize      → tamaño real objetivo en metros (ej. perchero 2.0, caja 0.4)
+  yOffset      → subir/bajar fino si aún roza el suelo (ej. 0.02)
+
+Ejemplo — mover el perchero de Copydad a la derecha:
+  "position": [1.0, 0, 0]     ← más a la derecha
+  "rotationDeg": [0, -90, 0]  ← girado
+
+Workflow contigo + Cursor:
+  1. Tú miras el juego y me dices: "el perchero más a la izquierda y más grande"
+  2. Yo edito el JSON y tú recargas el navegador
+  3. Repetimos hasta que quede bien
+
+Para probar cambios: npm run dev → recarga la página (F5)

@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "projectId": "copydad",
+  "theme": {
+    "wallTexture": "/assets/textures/tiny/Roofs/Roofs_01-128x128.png",
+    "floorTexture": "/assets/textures/tiny/Tile/Tile_02-128x128.png"
+  },
+  "props": [
+    {
+      "id": "psx-chair_09",
+      "label": "Chair 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        4.0792918596176,
+        0,
+        3.6963189365023865
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_09",
+      "rotationDeg": [
+        0,
+        45,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-chair_09-copy",
+      "label": "Chair 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.9720681372532742,
+        0,
+        -4.053574123853879
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_09",
+      "rotationDeg": [
+        0,
+        225,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx_assets-exported_glb-wardrobe-1",
+      "label": "wardrobe shelves",
+      "src": "/assets/itch/psx-assets/models/wardrobe-shelves.glb",
+      "kind": "model",
+      "position": [
+        0.4,
+        0,
+        0
+      ],
+      "scale": 1.6,
+      "space": "room",
+      "fitSize": 1
+    },
+    {
+      "id": "rooms-folded_shirt_lowpoly_game_",
+      "label": "folded shirt lowpoly game asset",
+      "src": "/assets/rooms/folded_shirt_lowpoly_game_asset.glb",
+      "kind": "model",
+      "position": [
+        0.49837860517984156,
+        0.65,
+        0.015950276699987387
+      ],
+      "scale": 0.4,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "rooms-folded_shirt_lowpoly_game_-1",
+      "label": "folded shirt lowpoly game asset",
+      "src": "/assets/rooms/folded_shirt_lowpoly_game_asset.glb",
+      "kind": "model",
+      "position": [
+        0.5058097944052125,
+        0.65,
+        0.5
+      ],
+      "scale": 0.4,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "rooms-folded_shirt_lowpoly_game_-2",
+      "label": "folded shirt lowpoly game asset",
+      "src": "/assets/rooms/folded_shirt_lowpoly_game_asset.glb",
+      "kind": "model",
+      "position": [
+        0.4958298106751502,
+        0.65,
+        -0.45653640287850017
+      ],
+      "scale": 0.4,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "rooms-clothing_rack_with_accesso",
+      "label": "clothing rack with accessories",
+      "src": "/assets/rooms/clothing_rack_with_accessories.glb",
+      "kind": "model",
+      "position": [
+        -0.3261981507073799,
+        0,
+        -0.10334323736922091
+      ],
+      "scale": 1.5,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        270,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "rooms-jacket-glb",
+      "label": "jacket",
+      "src": "/assets/rooms/jacket.glb",
+      "kind": "model",
+      "position": [
+        -3.9582803445766888,
+        0.67,
+        3.7702152254827555
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        135,
+        0
+      ],
+      "fitSize": 1,
+      "spin": true
+    }
+  ]
+}

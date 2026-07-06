@@ -1,0 +1,662 @@
+{
+  "version": 1,
+  "projectId": "vamps-back2school",
+  "theme": {
+    "wallTexture": "/assets/textures/tiny/Bricks/Bricks_16-128x128.png"
+  },
+  "props": [
+    {
+      "id": "table-row-1",
+      "label": "Mesa comedor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -2.2498479521726678,
+        0,
+        -3.0802418221937704
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_01",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1.4
+    },
+    {
+      "id": "table-row-2",
+      "label": "Mesa comedor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        3.152864544458068,
+        0,
+        -2.862272375185465
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_02",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1.4
+    },
+    {
+      "id": "table-row-3",
+      "label": "Mesa comedor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        1.7488572763275734,
+        0,
+        1.9996281828310938
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_03",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1.4
+    },
+    {
+      "id": "books-stack",
+      "label": "Libros",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        3.5,
+        0,
+        -2.5
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Book_01",
+      "rotationDeg": [
+        0,
+        -25,
+        0
+      ],
+      "fitSize": 0.25
+    },
+    {
+      "id": "books-loose",
+      "label": "Libros",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        3.8,
+        0,
+        -2.2
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Book_03",
+      "rotationDeg": [
+        0,
+        40,
+        5
+      ],
+      "fitSize": 0.22
+    },
+    {
+      "id": "pizza-branded",
+      "label": "Pizza VAMPS",
+      "src": "/assets/vamps/pharma/3d/cajapizza3.glb",
+      "kind": "model",
+      "position": [
+        0,
+        0.43,
+        0
+      ],
+      "scale": 1.4,
+      "space": "room",
+      "rotationDeg": [
+        12,
+        -35,
+        0
+      ],
+      "fitSize": 0.55,
+      "spin": true
+    },
+    {
+      "id": "table-row-1-copy",
+      "label": "Mesa comedor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.2431540391405176,
+        0,
+        -0.2910338390121162
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_01",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1.4
+    },
+    {
+      "id": "table-row-1-copy-copy",
+      "label": "Mesa comedor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -2.382991624785919,
+        0,
+        2.359311803726283
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_01",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1.4
+    },
+    {
+      "id": "table-row-3-copy",
+      "label": "Mesa comedor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        2.5959679136722804,
+        0,
+        0.025832319333832454
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_03",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1.4
+    },
+    {
+      "id": "table-row-3-copy-copy",
+      "label": "Mesa comedor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        0.38255501716980844,
+        0,
+        -2.5067734382706117
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_03",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 1.4
+    },
+    {
+      "id": "psx-trash_can_01",
+      "label": "Trash can 01",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.825885712458642,
+        0,
+        -2.031424106538484
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Trash_can_01",
+      "fitSize": 1
+    },
+    {
+      "id": "psx-water_02",
+      "label": "Water 02",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        4.3027891947027115,
+        0,
+        3.1986280930310937
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Water_02",
+      "fitSize": 1
+    },
+    {
+      "id": "psx-soda_03",
+      "label": "Soda 03",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        1.5,
+        0.64,
+        1.8386985107772675
+      ],
+      "scale": 0.7,
+      "space": "room",
+      "objectName": "Soda_03",
+      "rotationDeg": [
+        86,
+        26,
+        -14
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-soda_09",
+      "label": "Soda 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        1.9417175956760673,
+        0.64,
+        1.987603698427189
+      ],
+      "scale": 0.6,
+      "space": "room",
+      "objectName": "Soda_09",
+      "fitSize": 1
+    },
+    {
+      "id": "psx-soda_10",
+      "label": "Soda 10",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        0.7951042029030206,
+        0.7,
+        -2.565559506038379
+      ],
+      "scale": 0.7,
+      "space": "room",
+      "objectName": "Soda_10",
+      "rotationDeg": [
+        95,
+        0,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-sliced_pizza_01",
+      "label": "Sliced pizza 01",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -2.8761826932857577,
+        0.61,
+        -0.23353535638183098
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Sliced_pizza_01",
+      "rotationDeg": [
+        0,
+        40,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-sliced_pizza_02",
+      "label": "Sliced pizza 02",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -0.9299941128663627,
+        0,
+        3.339382410906752
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Sliced_pizza_02",
+      "rotationDeg": [
+        0,
+        136,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-pizza_02",
+      "label": "Pizza 02",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        3.159151695001766,
+        0.76,
+        -2.7191121300818497
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Pizza_02",
+      "fitSize": 1
+    },
+    {
+      "id": "psx-pizza_01-1",
+      "label": "Pizza 01",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        0.042368004030555406,
+        0.6,
+        -2.517396935917431
+      ],
+      "scale": 0.5,
+      "space": "room",
+      "objectName": "Pizza_01",
+      "fitSize": 1
+    },
+    {
+      "id": "rooms-cardboard_box-glb",
+      "label": "cardboard box",
+      "src": "/assets/rooms/cardboard_box.glb",
+      "kind": "model",
+      "position": [
+        4.000216517638158,
+        0,
+        4.123803812513523
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        45,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-pizza_01-1-copy",
+      "label": "Pizza 01",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        3.8544347474032143,
+        0.6,
+        3.7257257713251817
+      ],
+      "scale": 0.5,
+      "space": "room",
+      "objectName": "Pizza_01",
+      "fitSize": 1
+    },
+    {
+      "id": "psx-water_02-copy",
+      "label": "Water 02",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -2.020170871386876,
+        0.1,
+        1.1446563007685628
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Water_02",
+      "rotationDeg": [
+        90,
+        0,
+        119
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-chair_04",
+      "label": "Chair 04",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        2.733701508822156,
+        0,
+        -1.7356270051133862
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_04",
+      "fitSize": 1
+    },
+    {
+      "id": "psx-chair_09",
+      "label": "Chair 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        0.8114687090652151,
+        0,
+        -3.496166298038443
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_09",
+      "rotationDeg": [
+        0,
+        135,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-chair_09-copy",
+      "label": "Chair 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        0.9857414649845664,
+        0,
+        2.4379815409303522
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_09",
+      "fitSize": 1
+    },
+    {
+      "id": "psx-chair_09-copy-copy",
+      "label": "Chair 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.52446583237984,
+        0,
+        0.4093683527727028
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_09",
+      "rotationDeg": [
+        0,
+        315,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-chair_09-copy-copy-copy",
+      "label": "Chair 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        3.223437530743219,
+        0,
+        -0.6632845788164436
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_09",
+      "rotationDeg": [
+        0,
+        135,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-chair_09-copy-copy-copy-copy",
+      "label": "Chair 09",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        2.064376722910342,
+        0,
+        0.367524415595482
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Chair_09",
+      "fitSize": 1
+    },
+    {
+      "id": "psx_assets-exported_glb-tv-glb",
+      "label": "tv",
+      "src": "/assets/itch/psx-assets/models/tv.glb",
+      "kind": "model",
+      "position": [
+        -2.48270128028533,
+        0.58,
+        2.371637375746645
+      ],
+      "scale": 0.7,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        45,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-lamps_06",
+      "label": "Lamps 06",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -5,
+        1.61,
+        -3.0784132695879736
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Lamps_06",
+      "rotationDeg": [
+        0,
+        0,
+        -90
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-lamps_06-copy",
+      "label": "Lamps 06",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -5,
+        1.61,
+        2.137824284232279
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Lamps_06",
+      "rotationDeg": [
+        0,
+        0,
+        -90
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-lamps_06-copy-copy",
+      "label": "Lamps 06",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.4,
+        1.61,
+        5
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Lamps_06",
+      "rotationDeg": [
+        0,
+        90,
+        -90
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-lamps_06-copy-copy-copy",
+      "label": "Lamps 06",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.0779713107684685,
+        1.61,
+        5.2
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Lamps_06",
+      "rotationDeg": [
+        0,
+        90,
+        -90
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-lamps_06-copy-copy-copy-1",
+      "label": "Lamps 06",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.0787230065876434,
+        1.61,
+        5.2
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Lamps_06",
+      "rotationDeg": [
+        0,
+        90,
+        -90
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "psx-lamps_06-copy-copy-copy-2",
+      "label": "Lamps 06",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        2.0811723930717827,
+        1.61,
+        5
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Lamps_06",
+      "rotationDeg": [
+        0,
+        90,
+        -90
+      ],
+      "fitSize": 1
+    }
+  ]
+}

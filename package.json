@@ -1,0 +1,21 @@
+{
+  "name": "backrooms-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "share": "vite --host",
+    "build": "npm run catalog && tsc && vite build",
+    "preview": "vite preview",
+    "catalog": "node scripts/build-asset-catalog.mjs"
+  },
+  "devDependencies": {
+    "@types/three": "^0.184.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "three": "^0.171.0"
+  }
+}

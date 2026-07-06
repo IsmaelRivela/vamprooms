@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "projectId": "vamps-pharma",
+  "theme": {
+    "wallTexture": "/assets/textures/tiny/Tile/Tile_09-128x128.png",
+    "floorTexture": "/assets/textures/tiny/Tile/Tile_20-128x128.png"
+  },
+  "props": [
+    {
+      "id": "brochure-stack",
+      "label": "Folletos",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.5,
+        0.88,
+        -0.5
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Book_02",
+      "rotationDeg": [
+        0,
+        80,
+        0
+      ],
+      "fitSize": 0.2
+    },
+    {
+      "id": "pedestal-ring",
+      "label": "Pedestal",
+      "src": "/assets/rooms/pedestal.glb",
+      "kind": "model",
+      "position": [
+        0.15,
+        0,
+        -1.35
+      ],
+      "scale": 1,
+      "space": "room",
+      "fitSize": 0.95
+    },
+    {
+      "id": "display-ring",
+      "label": "Anillo",
+      "src": "/assets/vamps/pharma/3d/vampire+fang+ring+3d+model.opt.glb",
+      "kind": "model",
+      "position": [
+        0,
+        1.17,
+        -1.35
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        0,
+        -86
+      ],
+      "fitSize": 0.42,
+      "spin": true
+    },
+    {
+      "id": "pedestal-nails",
+      "label": "Pedestal",
+      "src": "/assets/rooms/pedestal.glb",
+      "kind": "model",
+      "position": [
+        0.15,
+        0,
+        0
+      ],
+      "scale": 1,
+      "space": "room",
+      "fitSize": 0.95
+    },
+    {
+      "id": "display-nails",
+      "label": "Nails",
+      "src": "/assets/vamps/pharma/3d/nail+art+3d+model.opt.glb",
+      "kind": "model",
+      "position": [
+        0.15,
+        1.02,
+        0
+      ],
+      "scale": 1,
+      "space": "room",
+      "fitSize": 0.42,
+      "spin": true
+    },
+    {
+      "id": "pedestal-shirt",
+      "label": "Pedestal",
+      "src": "/assets/rooms/pedestal.glb",
+      "kind": "model",
+      "position": [
+        0.15,
+        0,
+        1.35
+      ],
+      "scale": 1,
+      "space": "room",
+      "fitSize": 0.95
+    },
+    {
+      "id": "display-shirt",
+      "label": "Camiseta",
+      "src": "/assets/vamps/pharma/3d/white+t-shirt+3d+model.opt.glb",
+      "kind": "model",
+      "position": [
+        0.15,
+        1.12,
+        1.35
+      ],
+      "scale": 1.5,
+      "space": "room",
+      "fitSize": 0.58,
+      "spin": true
+    },
+    {
+      "id": "psx_assets-exported_glb-clock-gl",
+      "label": "clock",
+      "src": "/assets/itch/psx-assets/models/clock.glb",
+      "kind": "model",
+      "position": [
+        -4.7,
+        1.22,
+        0.7312350240120267
+      ],
+      "scale": 1,
+      "space": "room",
+      "fitSize": 1
+    },
+    {
+      "id": "rooms-shelf-glb-copy",
+      "label": "shelf",
+      "src": "/assets/rooms/shelf.glb",
+      "kind": "model",
+      "position": [
+        -2,
+        0,
+        -4.7
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        -180,
+        0
+      ],
+      "fitSize": 1.8
+    }
+  ]
+}

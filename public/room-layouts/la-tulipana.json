@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "projectId": "la-tulipana",
+  "theme": {
+    "wallTexture": "/assets/textures/tiny/Roofs/Roofs_02-128x128.png",
+    "floorTexture": "/assets/textures/tiny/Grass/Grass_07-128x128.png"
+  },
+  "props": [
+    {
+      "id": "grass-corner-nw",
+      "label": "Césped esquina",
+      "src": "/assets/itch/nature/grass/grass_patch_corner.glb",
+      "kind": "model",
+      "position": [
+        -3.5,
+        0,
+        -3.5
+      ],
+      "scale": 1,
+      "space": "room",
+      "fitSize": 1.8
+    },
+    {
+      "id": "grass-corner-se",
+      "label": "Césped esquina",
+      "src": "/assets/itch/nature/grass/grass_patch_corner.glb",
+      "kind": "model",
+      "position": [
+        3.5,
+        0,
+        3.5
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "fitSize": 1.8
+    },
+    {
+      "id": "bush-north-2",
+      "label": "Arbusto",
+      "src": "/assets/itch/nature/bushes/bush03.glb",
+      "kind": "model",
+      "position": [
+        2,
+        0,
+        -4.2
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        -15,
+        0
+      ],
+      "fitSize": 1.5
+    },
+    {
+      "id": "bush-south",
+      "label": "Arbusto",
+      "src": "/assets/itch/nature/bushes/bush04.glb",
+      "kind": "model",
+      "position": [
+        0,
+        0,
+        4
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        180,
+        0
+      ],
+      "fitSize": 1.6
+    },
+    {
+      "id": "plant-1",
+      "label": "Maceta",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -3.8,
+        0,
+        0
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Plants_01",
+      "rotationDeg": [
+        0,
+        90,
+        0
+      ],
+      "fitSize": 0.9
+    },
+    {
+      "id": "plant-2",
+      "label": "Maceta",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        3.8,
+        0,
+        -1
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Plants_02",
+      "rotationDeg": [
+        0,
+        -90,
+        0
+      ],
+      "fitSize": 1
+    },
+    {
+      "id": "plant-3",
+      "label": "Maceta grande",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        0,
+        0,
+        -2.5
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Plants_03",
+      "fitSize": 1.2
+    },
+    {
+      "id": "plant-4",
+      "label": "Maceta",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        1.8,
+        0,
+        2.5
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Plants_04",
+      "rotationDeg": [
+        0,
+        -40,
+        0
+      ],
+      "fitSize": 0.85
+    },
+    {
+      "id": "display-table",
+      "label": "Mesa expositor",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -1.2,
+        0,
+        1.5
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Table_08",
+      "rotationDeg": [
+        0,
+        25,
+        0
+      ],
+      "fitSize": 1.1
+    },
+    {
+      "id": "basket-flowers",
+      "label": "Cesta",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        2.8,
+        0,
+        1
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Basket_01",
+      "rotationDeg": [
+        0,
+        -60,
+        0
+      ],
+      "fitSize": 0.7
+    },
+    {
+      "id": "grass-tuft-1",
+      "label": "Hierba",
+      "src": "/assets/itch/nature/grass/grass03.glb",
+      "kind": "model",
+      "position": [
+        -1.5,
+        0,
+        3
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        45,
+        0
+      ],
+      "fitSize": 0.6
+    },
+    {
+      "id": "grass-tuft-2",
+      "label": "Hierba",
+      "src": "/assets/itch/nature/grass/grass05.glb",
+      "kind": "model",
+      "position": [
+        1,
+        0,
+        -3.8
+      ],
+      "scale": 1,
+      "space": "room",
+      "rotationDeg": [
+        0,
+        -30,
+        0
+      ],
+      "fitSize": 0.55
+    },
+    {
+      "id": "psx-plants_04",
+      "label": "Plants 04",
+      "src": "/assets/itch/psx-living/Models/All.fbx",
+      "kind": "model",
+      "position": [
+        -2.7081040967280856,
+        0,
+        -2.3392539484195938
+      ],
+      "scale": 1,
+      "space": "room",
+      "objectName": "Plants_04",
+      "fitSize": 0.9
+    }
+  ]
+}

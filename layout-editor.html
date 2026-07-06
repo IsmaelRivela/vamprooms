@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BACKROOMS — Layout Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="editor-root">
+      <header id="toolbar">
+        <div class="toolbar-left">
+          <a href="/" class="back-link">← Juego</a>
+          <h1>Layout Editor</h1>
+          <label class="room-select">
+            Sala
+            <select id="room-select"></select>
+          </label>
+        </div>
+        <div class="toolbar-center">
+          <button type="button" id="btn-reload" title="Recargar JSON de la sala">Recargar</button>
+          <button type="button" id="btn-import">Importar JSON</button>
+          <button type="button" id="btn-export" class="primary">Exportar JSON</button>
+        </div>
+        <div class="toolbar-right">
+          <span id="room-loading"></span>
+          <span id="prop-count">0 props</span>
+        </div>
+      </header>
+
+      <aside id="catalog">
+        <div class="catalog-head">
+          <input id="catalog-search" type="search" placeholder="Buscar asset…" autocomplete="off" />
+          <div class="catalog-actions">
+            <button type="button" id="catalog-expand-all" class="secondary">Abrir todas</button>
+            <button type="button" id="catalog-collapse-all" class="secondary">Cerrar todas</button>
+          </div>
+        </div>
+        <div id="catalog-list"></div>
+        <p class="catalog-hint">
+          Modelos 3D: arrastra al suelo. <strong>Texturas</strong>: botones Pared/Suelo. Los
+          <code>.blend</code> hay que exportarlos a GLB/FBX primero.
+        </p>
+      </aside>
+
+      <main id="viewport-wrap">
+        <canvas id="viewport"></canvas>
+        <div id="viewport-hud">
+          <span>Orbit: botón derecho · Mover prop: arrastrar · <kbd>Del</kbd> borrar ·
+            <kbd>R</kbd> rotar 45° · <kbd>D</kbd> duplicar</span>
+        </div>
+      </main>
+
+      <aside id="inspector">
+        <section id="theme-section">
+          <h2>Superficies</h2>
+          <label>
+            Pared (preset)
+            <select id="wall-preset"></select>
+          </label>
+          <label>
+            Suelo (preset)
+            <select id="floor-preset"></select>
+          </label>
+          <details id="texture-picks">
+            <summary>Texturas custom (pack tiny)</summary>
+            <p class="theme-hint">Clic en miniatura — anula el preset de arriba.</p>
+            <h4>Pared</h4>
+            <div id="wall-texture-grid" class="texture-grid"></div>
+            <button type="button" id="clear-wall-texture" class="secondary">Quitar custom pared</button>
+            <h4>Suelo</h4>
+            <div id="floor-texture-grid" class="texture-grid"></div>
+            <button type="button" id="clear-floor-texture" class="secondary">Quitar custom suelo</button>
+          </details>
+        </section>
+
+        <h2>Inspector</h2>
+        <div id="inspector-empty">Selecciona un prop en la escena</div>
+        <form id="inspector-form" class="hidden">
+          <label>ID <input name="id" type="text" required /></label>
+          <label>Label <input name="label" type="text" required /></label>
+          <label>Src <input name="src" type="text" readonly /></label>
+          <label class="hidden-fbx">objectName <input name="objectName" type="text" readonly /></label>
+          <fieldset>
+            <legend>Posición (XZ relativo al centro de sala)</legend>
+            <label>X <input name="px" type="number" step="0.1" /></label>
+            <label>Y <input name="py" type="number" step="0.01" /></label>
+            <label>Z <input name="pz" type="number" step="0.1" /></label>
+          </fieldset>
+          <fieldset>
+            <legend>Rotación (grados)</legend>
+            <label>RX <input name="rx" type="number" step="1" /></label>
+            <label>RY <input name="ry" type="number" step="1" /></label>
+            <label>RZ <input name="rz" type="number" step="1" /></label>
+          </fieldset>
+          <label>fitSize <input name="fitSize" type="number" step="0.05" min="0.05" /></label>
+          <label>scale <input name="scale" type="number" step="0.1" min="0.1" value="1" /></label>
+          <label>yOffset <input name="yOffset" type="number" step="0.01" /></label>
+          <label class="checkbox"><input name="spin" type="checkbox" /> spin</label>
+          <button type="button" id="btn-reload-model" class="secondary">Recargar modelo</button>
+          <button type="button" id="btn-delete" class="danger">Eliminar prop</button>
+        </form>
+
+        <section id="preview-section">
+          <h3>Vista previa asset</h3>
+          <canvas id="preview-canvas" width="200" height="160"></canvas>
+          <p id="preview-label">—</p>
+        </section>
+      </aside>
+
+      <dialog id="import-dialog">
+        <form method="dialog">
+          <h3>Importar layout JSON</h3>
+          <textarea id="import-text" rows="16" placeholder='{"version":1,"projectId":"...","props":[]}'></textarea>
+          <div class="dialog-actions">
+            <button type="button" id="import-file-btn">Elegir archivo…</button>
+            <input id="import-file" type="file" accept=".json,application/json" hidden />
+            <button type="submit" class="primary">Aplicar</button>
+            <button type="button" value="cancel">Cancelar</button>
+          </div>
+        </form>
+      </dialog>
+    </div>
+    <script type="module" src="/src/editor/main.ts"></script>
+  </body>
+</html>
