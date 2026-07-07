@@ -4,7 +4,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import type { ModelDisplayOptions } from '../data/projects';
 import { createPS1Material } from '../rendering/PS1Renderer';
-import { publicUrl } from '../utils/publicUrl';
+import { publicUrl, resolveAssetUrl } from '../utils/publicUrl';
 import { loadImageTexture } from './AssetTextures';
 import {
   applyFoliageMaterialSettings,
@@ -21,6 +21,7 @@ const CIGARETTE_TEXTURES = publicUrl('assets/itch/cigarettes/Textures/');
 
 const loadingManager = new THREE.LoadingManager();
 loadingManager.setURLModifier((url) => {
+  url = resolveAssetUrl(url);
   const file = decodeURIComponent(url.split(/[/\\]/).pop() ?? url);
   if (!/\.(jpe?g|png)$/i.test(file)) return url;
   if (url.includes('Cigarette') || url.includes('cigarette')) {
