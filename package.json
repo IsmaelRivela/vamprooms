@@ -7,6 +7,7 @@
     "dev": "vite --host",
     "share": "vite --host",
     "build": "npm run catalog && tsc && vite build",
+    "build:pages": "VITE_PAGES=true npm run build",
     "preview": "vite preview",
     "catalog": "node scripts/build-asset-catalog.mjs"
   },

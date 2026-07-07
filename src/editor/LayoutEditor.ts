@@ -11,6 +11,7 @@ import {
   listTinyTexturePicks,
   WALL_THEME_LABELS,
 } from '../world/TinyTextures';
+import { publicUrl } from '../utils/publicUrl';
 
 export interface CatalogItem {
   id: string;
@@ -67,13 +68,6 @@ const ROOM_HALF = 5;
 const ROOM_WALL_H = 2.6;
 const DRAG_TYPE = 'application/x-backrooms-asset';
 const MAX_CONCURRENT_MESH_LOADS = 4;
-
-/** URL servida con base de Vite (funciona en dev y dist/). */
-function publicUrl(path: string): string {
-  const base = import.meta.env.BASE_URL;
-  const rel = path.startsWith('/') ? path.slice(1) : path;
-  return `${base}${rel}`;
-}
 
 export class LayoutEditor {
   private readonly scene = new THREE.Scene();

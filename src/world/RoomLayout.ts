@@ -1,4 +1,5 @@
 import type { FloorTheme, WallTheme } from './ProjectThemes';
+import { publicUrl } from '../utils/publicUrl';
 
 /** Overrides de superficies de sala (editable en layout editor). */
 export interface RoomThemeOverride {
@@ -72,7 +73,7 @@ export function propModelRotation(prop: PlacedProp): [number, number, number] | 
 
 export async function loadLayout(projectId: string): Promise<RoomLayout> {
   try {
-    const res = await fetch(`/room-layouts/${projectId}.json`);
+    const res = await fetch(publicUrl(`room-layouts/${projectId}.json`));
     if (res.ok) return (await res.json()) as RoomLayout;
   } catch {
     /* offline dev */

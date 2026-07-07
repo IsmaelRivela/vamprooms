@@ -4,6 +4,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import type { ModelDisplayOptions } from '../data/projects';
 import { createPS1Material } from '../rendering/PS1Renderer';
+import { publicUrl } from '../utils/publicUrl';
 import { loadImageTexture } from './AssetTextures';
 import {
   applyFoliageMaterialSettings,
@@ -14,9 +15,9 @@ import {
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
 
-const PSX_LIVING_TEXTURES = '/assets/itch/psx-living/Textures/';
-const NATURE_TEXTURES = '/assets/itch/nature/textures/';
-const CIGARETTE_TEXTURES = '/assets/itch/cigarettes/Textures/';
+const PSX_LIVING_TEXTURES = publicUrl('assets/itch/psx-living/Textures/');
+const NATURE_TEXTURES = publicUrl('assets/itch/nature/textures/');
+const CIGARETTE_TEXTURES = publicUrl('assets/itch/cigarettes/Textures/');
 
 const loadingManager = new THREE.LoadingManager();
 loadingManager.setURLModifier((url) => {
@@ -26,7 +27,7 @@ loadingManager.setURLModifier((url) => {
     return `${CIGARETTE_TEXTURES}${file}`;
   }
   if (url.includes('exploration') || url.includes('Flashlight')) {
-    return `/assets/itch/exploration/${file}`;
+    return publicUrl(`assets/itch/exploration/${file}`);
   }
   if (url.includes('nature') || url.includes('bushes') || url.includes('trees') || url.includes('grass')) {
     return `${NATURE_TEXTURES}${file}`;
@@ -115,7 +116,7 @@ function guessPsxTextureUrl(hint: string): string {
   if (/plant|grass|bush|tree|flower|tulip/i.test(lower)) return `${PSX_LIVING_TEXTURES}Plants.png`;
   if (/soap|shampoo|tooth|hygiene|medic|pill/i.test(lower)) return `${PSX_LIVING_TEXTURES}Hygiene.jpg`;
   if (/fabric|cloth|dirty|pillow|shirt|leather|clothing/i.test(lower)) return `${PSX_LIVING_TEXTURES}Fabric_02.jpg`;
-  if (/flashlight/i.test(lower)) return `/assets/itch/exploration/Flashlight.png`;
+  if (/flashlight/i.test(lower)) return publicUrl('assets/itch/exploration/Flashlight.png');
   if (/metal|lamp|microwave|tv|refrigerator|electronic|emf|flash|spirit|camera/i.test(lower)) return `${PSX_LIVING_TEXTURES}Metal_02.jpg`;
   if (/book|paper|brochure/i.test(lower)) return `${PSX_LIVING_TEXTURES}Paper.jpg`;
   if (/food|cookie|box_cookies|pizza/i.test(lower)) return `${PSX_LIVING_TEXTURES}Foods.jpg`;
@@ -315,23 +316,24 @@ function loadFbxScene(src: string): Promise<THREE.Object3D> {
 }
 
 async function loadRawScene(src: string): Promise<THREE.Object3D> {
-  if (!sceneCache.has(src)) {
-    if (!sceneLoadInflight.has(src)) {
+  const resolvedSrc = publicUrl(src);
+  if (!sceneCache.has(resolvedSrc)) {
+    if (!sceneLoadInflight.has(resolvedSrc)) {
       sceneLoadInflight.set(
-        src,
-        (isFbxSrc(src) ? loadFbxScene(src) : loadGltfScene(src))
+        resolvedSrc,
+        (isFbxSrc(resolvedSrc) ? loadFbxScene(resolvedSrc) : loadGltfScene(resolvedSrc))
           .then((scene) => {
-            sceneCache.set(src, scene);
+            sceneCache.set(resolvedSrc, scene);
             return scene;
           })
           .finally(() => {
-            sceneLoadInflight.delete(src);
+            sceneLoadInflight.delete(resolvedSrc);
           }),
       );
     }
-    await sceneLoadInflight.get(src);
+    await sceneLoadInflight.get(resolvedSrc);
   }
-  return sceneCache.get(src)!.clone(true);
+  return sceneCache.get(resolvedSrc)!.clone(true);
 }
 
 export interface LoadedModel {

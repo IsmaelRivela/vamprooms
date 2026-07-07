@@ -10,21 +10,48 @@ if ! "$GH" auth status &>/dev/null; then
   "$GH" auth login
 fi
 
-echo "→ Subiendo juego (vamprooms)…"
-cd "$GAME"
-"$GH" repo create IsmaelRivela/vamprooms --public --source=. --remote=origin --push 2>/dev/null \
-  || { git remote add origin "https://github.com/IsmaelRivela/vamprooms.git" 2>/dev/null || true; git push -u origin main; }
+# Buffer grande solo para este push (assets ~100MB)
+GIT_HTTP_OPTS=(-c http.postBuffer=524288000 -c http.version=HTTP/1.1)
 
-echo "→ Subiendo editor (vamprooms-editor)…"
+push_repo() {
+  local dir="$1" name="$2" url="https://github.com/IsmaelRivela/${name}.git"
+  cd "$dir"
+  if git remote get-url origin &>/dev/null; then
+    git remote set-url origin "$url"
+  else
+    git remote add origin "$url"
+  fi
+  if ! git rev-parse HEAD &>/dev/null; then
+    git add -A
+    git commit -m "Initial commit"
+  fi
+  echo "→ Subiendo ${name}…"
+  for attempt in 1 2 3; do
+    if git "${GIT_HTTP_OPTS[@]}" push -u origin main; then
+      return 0
+    fi
+    echo "   Reintento ${attempt}/3 en 5s…"
+    sleep 5
+  done
+  return 1
+}
+
+echo "→ Creando repos si no existen…"
+"$GH" repo view IsmaelRivela/vamprooms &>/dev/null || "$GH" repo create IsmaelRivela/vamprooms --public
+"$GH" repo view IsmaelRivela/vamprooms-editor &>/dev/null || "$GH" repo create IsmaelRivela/vamprooms-editor --public
+
+push_repo "$GAME" "vamprooms"
+
+echo "→ Preparando editor…"
 mkdir -p "$EDITOR"
 rsync -a --exclude node_modules --exclude dist --exclude .git --exclude _vamps-ref "$GAME/" "$EDITOR/"
 cp "$EDITOR/README.editor.md" "$EDITOR/README.md"
 cd "$EDITOR"
-git init -b main 2>/dev/null || true
+if [ ! -d .git ]; then git init -b main; fi
 git add -A
-git diff --cached --quiet || git commit -m "Sync from vamprooms game repo"
-"$GH" repo create IsmaelRivela/vamprooms-editor --public --source=. --remote=origin --push 2>/dev/null \
-  || { git remote add origin "https://github.com/IsmaelRivela/vamprooms-editor.git" 2>/dev/null || true; git push -u origin main; }
+git diff --cached --quiet || git commit -m "Sync from vamprooms"
+
+push_repo "$EDITOR" "vamprooms-editor"
 
 echo "✓ Listo:"
 echo "  https://github.com/IsmaelRivela/vamprooms"

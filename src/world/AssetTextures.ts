@@ -1,8 +1,9 @@
 import * as THREE from 'three';
 import type { Project } from '../data/projects';
 import { createPS1Material } from '../rendering/PS1Renderer';
+import { publicUrl } from '../utils/publicUrl';
 
-const PLACEHOLDER = '/assets/placeholder.svg';
+const PLACEHOLDER = publicUrl('assets/placeholder.svg');
 
 const loader = new THREE.TextureLoader();
 loader.setCrossOrigin('anonymous');
@@ -18,7 +19,7 @@ export function configureImageTexture(tex: THREE.Texture): void {
 }
 
 export function loadImageTexture(src: string): Promise<THREE.Texture> {
-  const key = src || PLACEHOLDER;
+  const key = publicUrl(src || 'assets/placeholder.svg');
   const existing = cache.get(key);
   if (existing) return existing;
 

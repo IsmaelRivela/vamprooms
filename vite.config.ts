@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'vamprooms';
+const pagesBase = process.env.VITE_PAGES === 'true' ? `/${repoName}/` : './';
+
 export default defineConfig({
-  base: './',
+  base: pagesBase,
   server: {
     host: true,
     allowedHosts: true,
